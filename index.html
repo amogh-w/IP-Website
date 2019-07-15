@@ -1,46 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Your page title here :)</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- FONT
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/favicon.png">
-
-</head>
-<body>
-
-  <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hotel Sunrise</title>
+    <!--Font-->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <!--Welcome Section-->
+    <div class="welcome-container container">
+      <section class="welcome-section">
+        <h1 class="title">Hotel Sunrise</h1>
+        <p>Ipsum do laborum eu nisi ad proident nulla excepteur.</p>
+        <button>Explore</button>
+        <button class="button-primary">Book</button>
+      </section>
+    </div>
+    <hr />
+    <!--Explore Section-->
+    <div class="explore-container container">
+      <section class="explore-section">
+        <h3>Explore</h3>
+        <div class="row">
+          <div class="one-third column">
+            <h5>Luxury Suite</h5>
+            <img
+              src="./images/luxury-room.jpg"
+              class="u-max-full-width explore-img"
+              alt=""
+              srcset=""
+            />
+            <p>Nostrud Lorem et ad dolore deserunt do veniam aliquip.</p>
+          </div>
+          <div class="one-third column">
+            <h5>Deluxe Suite</h5>
+            <img
+              src="./images/deluxe-room.jpg"
+              class="u-max-full-width explore-img"
+              alt=""
+              srcset=""
+            />
+            <p>Mollit id incididunt adipisicing voluptate sit id.</p>
+          </div>
+          <div class="one-third column">
+            <h5>Premier Suite</h5>
+            <img
+              src="./images/premier-room.jpg"
+              class="u-max-full-width explore-img"
+              alt=""
+              srcset=""
+            />
+            <p>Non adipisicing voluptate sint ad.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <hr />
+    <!--Services Section-->
+    <div class="services-container container">
+      <section class="services-section">
+        <h3>Services</h3>
+        <div class="row">
+          <div class="one-half column">
+            <i class="fa fa-bell" aria-hidden="true"></i>
+            <h5>Room Service</h5>
+            <p>
+              Cillum amet do sunt id eiusmod cillum eiusmod mollit laboris quis
+              voluptate sint.
+            </p>
+          </div>
+          <div class="one-half column">
+            <i class="fa fa-coffee" aria-hidden="true"></i>
+            <h5>Free Breakfast</h5>
+            <p>Minim nostrud pariatur enim velit nisi magna exercitation.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="one-half column">
+            <i class="fa fa-car" aria-hidden="true"></i>
+            <h5>Free Parking</h5>
+            <p>
+              Et proident esse deserunt elit officia laborum consequat aliquip.
+            </p>
+          </div>
+          <div class="one-half column">
+            <i class="fa fa-leaf" aria-hidden="true"></i>
+            <h5>Free Spa</h5>
+            <p>
+              Enim duis eu ut quis cillum consequat aliquip esse officia elit
+              cupidatat proident tempor.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <hr />
+    <!--Address Section-->
+    <div class="address-container container">
+      <section class="address-section">
+        <h3>Address</h3>
+        <div class="row">
+          <iframe
+            width="100%"
+            height="300"
+            src="https://maps.google.com/maps?q=vidyalankar%20institute&ie=UTF8&output=embed"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          >
+          </iframe>
+        </div>
+      </section>
+    </div>
+    <hr />
+    <!--Contact Section-->
+    <div class="contact-container container">
+      <section class="contact-section">
+        <h3>Contact Us</h3>
+        <form class="contact-form">
+          <div class="row">
+            <div class="one-half column">
+              <label for="exampleEmailInput">Your email</label>
+              <input
+                class="u-full-width"
+                type="email"
+                placeholder="yourname@mailbox.com"
+                id="exampleEmailInput"
+              />
+            </div>
+            <div class="one-half column">
+              <label for="exampleRecipientInput">Reason</label>
+              <select class="u-full-width" id="exampleRecipientInput">
+                <option value="Option 1">Booking</option>
+                <option value="Option 2">Reservation</option>
+                <option value="Option 3">Refund</option>
+              </select>
+            </div>
+          </div>
+          <label for="exampleMessage">Message</label>
+          <textarea
+            class="u-full-width"
+            placeholder="Enter your message here..."
+            id="exampleMessage"
+          ></textarea>
+          <input class="button-primary" type="submit" value="Submit" />
+        </form>
+      </section>
+    </div>
+    <!--Footer Section-->
+    <div class="footer-container">
+      <div class="container">
+        <section class="footer-section">
+          <div class="row">
+            <div class="one-half column">
+              <h5>About Us</h5>
+              <p>
+                Esse consequat velit fugiat cillum do esse. Est et aliquip
+                dolore est enim ut ut. Qui dolor officia ad laboris sunt
+                exercitation laborum est et ipsum in.
+              </p>
+            </div>
+            <div class="one-half column">
+              <h5>Social Links</h5>
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
-  </div>
-
-<!-- End Document
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
+  </body>
 </html>
