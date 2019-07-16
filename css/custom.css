@@ -1,6 +1,6 @@
 /* 
 ----------
-WELCOME
+GLOBAL
 ----------
 */
 
@@ -81,4 +81,23 @@ FOOTER
 .footer-section {
   color: white;
   padding: 30px 0px;
+}
+
+/* 
+----------
+LOGIN
+----------
+*/
+
+.login-container {
+  width: 30%;
+}
+
+.login-section {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.sign-in-button {
+  float: right;
 }
