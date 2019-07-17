@@ -101,3 +101,8 @@ LOGIN
 .sign-in-button {
   float: right;
 }
+
+.forgot-password {
+  padding-top: 10px;
+  float: left;
+}
