@@ -27,46 +27,21 @@
     <script src="js/custom.js"></script>
   </head>
   <body>
-    <div class="login-container container">
+    <div class="container">
       <section class="login-section">
-        <h3 class="title">Login</h3>
+        <h3 class="title">
+          <i class="fa fa-user" aria-hidden="true"></i><br />Admin Login
+        </h3>
         <hr />
         <form>
-          <div class="row">
-            <div class="two columns">
-              <i class="fa fa-user fa-2x" aria-hidden="true"></i>
-            </div>
-            <div class="ten columns">
-              <input
-                class="u-full-width"
-                type="email"
-                placeholder="Username"
-                id="exampleEmailInput"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="two columns">
-              <i class="fa fa-lock fa-2x" aria-hidden="true"></i>
-            </div>
-            <div class="ten columns">
-              <input
-                class="u-full-width"
-                type="password"
-                placeholder="Password"
-                id="examplePasswordInput"
-              />
-            </div>
-          </div>
-        </form>
-        <div class="row">
-          <button class="sign-in-button button-primary">
+          <input type="text" name="username" placeholder="Username" />
+          <br />
+          <input type="password" name="password" placeholder="Password" />
+          <br />
+          <button class="button-primary">
             Sign In <i class="fa fa-sign-in" aria-hidden="true"></i>
           </button>
-          <a href="#" class="forgot-password">
-            <p>Forgot Password?</p>
-          </a>
-        </div>
+        </form>
       </section>
     </div>
   </body>
