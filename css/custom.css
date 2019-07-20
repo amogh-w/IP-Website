@@ -105,3 +105,30 @@ LOGIN
 .login-error-container a {
   text-decoration: none;
 }
+
+/* 
+----------
+ADMIN
+----------
+*/
+
+.admin-container {
+  margin: 0;
+  width: 100vw;
+}
+
+.admin-panel {
+  height: 100vh;
+  padding-top: 150px;
+  color: #ffffff;
+  background: #222222;
+  text-align: center;
+}
+
+.admin-panel ul {
+  list-style-type: none;
+}
+
+.admin-requests {
+  padding-top: 50px;
+}
