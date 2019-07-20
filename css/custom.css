@@ -93,3 +93,15 @@ LOGIN
   padding-top: 150px;
   text-align: center;
 }
+
+.login-error-container {
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login-error-container a {
+  text-decoration: none;
+}
