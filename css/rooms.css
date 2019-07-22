@@ -1,0 +1,86 @@
+body
+{
+    font-family: 'Raleway', sans-serif;
+}
+/* NAVBAR */
+#navbar
+{
+  height:60px;
+  margin-bottom: 20px;
+  /* border-bottom: 1px solid lightgrey; */
+  padding: 10px
+}
+#logo
+{
+  height: 50px;
+  padding: 5px;
+}
+.navLinks
+{
+  color: #0e0e0e;
+  margin: 10px;
+  vertical-align: 80%;
+  float: right;
+}
+.link
+{
+  color: #0e0e0e;
+  margin: 10px;
+  box-align: right;
+  
+}
+/* ROOM TITLE */
+.roomCategory
+{
+  text-align: center;
+  font-family:'Tangerine', cursive;
+  font-weight: 200;
+  margin-bottom: 5px;
+  font-size: 5em;
+}
+/* CARDS */
+.row
+{
+  margin-bottom:30px;
+}
+.title
+{
+    text-align: center;
+    margin:0px;
+}
+#name
+{
+  margin: 1.75rem;
+}
+.card 
+{
+  border: 1px solid #d3d3d3;
+  border-radius: .25rem;
+  min-height: 360px;
+}  
+.bg-img 
+{
+    background-size: cover;
+    background-position: center;
+    min-height: 30%;
+    display: block;
+}
+img
+{
+    max-height: 100%;
+    max-width:100%;
+    margin: auto;
+    object-fit: cover;
+}
+.content 
+{
+    padding: 15px;
+}
+button 
+{
+  background-color: transparent;
+  border: 1px solid #2196F3;
+  padding: .5rem 1rem;
+  cursor: pointer;
+  border-radius: .25rem;
+}
