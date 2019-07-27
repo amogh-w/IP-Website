@@ -1,6 +1,6 @@
 /* 
 ----------
-WELCOME
+GLOBAL
 ----------
 */
 
@@ -95,4 +95,54 @@ FOOTER
 .footer-section {
   color: white;
   padding: 30px 0px;
+}
+
+/* 
+----------
+LOGIN
+----------
+*/
+
+.login-section {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.login-error-container {
+  padding-top: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.login-error-container a {
+  text-decoration: none;
+}
+
+/* 
+----------
+ADMIN
+----------
+*/
+
+.admin-container {
+  margin: 0;
+  width: 100vw;
+}
+
+.admin-panel {
+  height: 100vh;
+  padding-top: 150px;
+  color: #ffffff;
+  background: #222222;
+  text-align: center;
+}
+
+.admin-panel ul {
+  list-style-type: none;
+}
+
+.admin-requests {
+  padding-top: 50px;
 }
