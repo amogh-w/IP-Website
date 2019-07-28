@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    if ( !isset($_SESSION['loggedin']) || $_SESSION['loggedin'] == false ) {
+        header("Location: login.html");
+    }
+?>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,27 +33,19 @@
     <script src="js/custom.js"></script>
   </head>
   <body>
-    <div class="container">
-      <section class="login-section">
-        <h3 class="title">
-          <i class="fa fa-user" aria-hidden="true"></i><br />Admin Login
-        </h3>
-        <hr />
-        <form action="login.php" method="POST" id="login-form">
-          <input type="text" name="username" placeholder="Username" required />
-          <br />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <br />
-          <button class="button-primary" type="submit" form="login-form">
-            Sign In <i class="fa fa-sign-in" aria-hidden="true"></i>
-          </button>
-        </form>
-      </section>
+    <div class="admin-container container">
+        <div class="one-third admin-panel column">
+            <ul>
+                <li>Option1</li>
+                <li>Option2</li>
+                <li>Option3</li>
+                <li>Option4</li>
+                <li>Option5</li>
+            </ul>
+        </div>
+        <div class="two-thirds admin-requests column">
+            <h3>Reservation Requests</h3>
+        </div>
     </div>
   </body>
 </html>

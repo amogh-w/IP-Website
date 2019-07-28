@@ -1,4 +1,19 @@
-<!DOCTYPE html>
+<?php
+    session_start();
+    $username = "cat";
+    $password = "dog";
+
+    if ( isset($_POST['username']) && isset($_POST['password']) ) {
+        if ($_POST['username'] == $username && $_POST['password'] == $password) {
+            $_SESSION['loggedin'] = true;
+            header("Location: admin.php");
+        }
+        else {
+            $_SESSION['loggedin'] = false;
+        }
+    }
+?>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,27 +42,9 @@
     <script src="js/custom.js"></script>
   </head>
   <body>
-    <div class="container">
-      <section class="login-section">
-        <h3 class="title">
-          <i class="fa fa-user" aria-hidden="true"></i><br />Admin Login
-        </h3>
-        <hr />
-        <form action="login.php" method="POST" id="login-form">
-          <input type="text" name="username" placeholder="Username" required />
-          <br />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <br />
-          <button class="button-primary" type="submit" form="login-form">
-            Sign In <i class="fa fa-sign-in" aria-hidden="true"></i>
-          </button>
-        </form>
-      </section>
+    <div class="login-error-container container">
+        <h3>Please check your credentials!</h3>
+        <a href="login.html"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retry Login</a>
     </div>
   </body>
 </html>
