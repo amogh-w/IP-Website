@@ -1,15 +1,24 @@
 <?php
     session_start();
-    $username = "cat";
-    $password = "dog";
+
+    $servername = "remotemysql.com";
+    $username = "CbzN4mp8xq";
+    $password = "SVwRDCf5cE";
+    $dbname = "CbzN4mp8xq";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
 
     if ( isset($_POST['username']) && isset($_POST['password']) ) {
-        if ($_POST['username'] == $username && $_POST['password'] == $password) {
-            $_SESSION['loggedin'] = true;
-            header("Location: admin.php");
-        }
-        else {
-            $_SESSION['loggedin'] = false;
+        $entered_username = $_POST['username'];
+        $entered_password = $_POST['password'];
+        
+        $sql = "SELECT id FROM admin WHERE username = '$entered_username' AND password = '$entered_password'";
+        $result = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($result) > 0) {
+          $_SESSION['loggedin'] = true;
+          header("Location: admin.php");
+        } else {
+          $_SESSION['loggedin'] = false;
         }
     }
 ?>
