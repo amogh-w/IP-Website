@@ -146,3 +146,18 @@ ADMIN
 .admin-requests {
   padding-top: 50px;
 }
+
+/* 
+----------
+Select
+----------
+*/
+
+.pricing-section {
+  text-align: center;
+  padding-top: 30px;
+}
+
+.select-section {
+  padding-top: 30px;
+}
