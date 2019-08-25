@@ -1,10 +1,10 @@
 <?php
     session_start();
 
-    $servername = "remotemysql.com";
-    $username = "CbzN4mp8xq";
-    $password = "SVwRDCf5cE";
-    $dbname = "CbzN4mp8xq";
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "sunrisedb";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -12,7 +12,7 @@
         $entered_username = $_POST['username'];
         $entered_password = $_POST['password'];
         
-        $sql = "SELECT id FROM admin WHERE username = '$entered_username' AND password = '$entered_password'";
+        $sql = "SELECT id FROM login WHERE user = '$entered_username' AND pass = '$entered_password'";
         $result = mysqli_query($conn, $sql);
         if(mysqli_num_rows($result) > 0) {
           $_SESSION['loggedin'] = true;
