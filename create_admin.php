@@ -1,4 +1,26 @@
-<!DOCTYPE html>
+<?php
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "sunrisedb";
+
+    $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+    if ( isset($_POST['username']) && isset($_POST['password']) && isset($_POST['secretKey']) ) {
+        $entered_username = $_POST['username'];
+        $entered_password = $_POST['password'];
+        $entered_secretKey = $_POST['secretKey'];
+        $id = rand(100, 999);
+
+        if ($entered_secretKey == 'abcd1234') {
+            $sql = "INSERT INTO login(id, user, pass) VALUES ($id, '$entered_username', '$entered_password')";
+            if (mysqli_query($conn, $sql)) {
+              header("Location: login.html");
+            }
+        }
+    }
+?>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,31 +49,9 @@
     <script src="js/custom.js"></script>
   </head>
   <body>
-    <div class="container">
-      <section class="login-section">
-        <h3 class="title">
-          <i class="fa fa-user" aria-hidden="true"></i><br />Admin Login
-        </h3>
-        <hr />
-        <form action="login.php" method="POST" id="login-form">
-          <input type="text" name="username" placeholder="Username" required />
-          <br />
-          <input
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          <br />
-          <button class="button-primary" type="submit" form="login-form">
-            Sign In <i class="fa fa-sign-in" aria-hidden="true"></i>
-          </button>
-          <hr />
-          <button class="button" onclick="location.href = 'create_admin.html'">
-            Create New Admin <i class="fa fa-sign-in" aria-hidden="true"></i>
-          </button>
-        </form>
-      </section>
+    <div class="login-error-container container">
+        <h3>Error, please retry or check your Secret Key!</h3>
+        <a href="login.html"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retry</a>
     </div>
   </body>
 </html>
