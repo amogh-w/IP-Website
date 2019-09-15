@@ -45,6 +45,41 @@
         </div>
         <div class="two-thirds admin-requests column">
             <h3>Reservation Requests</h3>
+            <table class="u-full-width">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Zipcode</th>
+                  <th>Phone</th>
+                  <th>Room</th>
+                </tr>
+              </thead>
+              <tbody>
+                <?php
+                  $servername = "localhost";
+                  $username = "root";
+                  $password = "";
+                  $dbname = "sunrisedb";
+                
+                  $conn = mysqli_connect($servername, $username, $password, $dbname);
+
+                  $sel_query='select * from request';
+                  $result=mysqli_query($conn, $sel_query);
+
+                  while($row = mysqli_fetch_assoc($result)) { ?>
+                    <tr>
+                      <td><?php echo $row["id"]; ?></td>
+                      <td><?php echo $row["name"]; ?></td>
+                      <td><?php echo $row["address"]; ?></td>
+                      <td><?php echo $row["zipcode"]; ?></td>
+                      <td><?php echo $row["phone"]; ?></td>
+                      <td><?php echo $row["room"]; ?></td>
+                    </tr>
+                    <?php } ?>
+              </tbody>
+            </table>
         </div>
     </div>
   </body>
