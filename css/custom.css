@@ -141,6 +141,8 @@ ADMIN
 
 .admin-panel ul {
   list-style-type: none;
+  padding-left: 25%;
+  text-align: left;
 }
 
 .admin-requests {

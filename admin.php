@@ -36,11 +36,9 @@
     <div class="admin-container container">
         <div class="one-third admin-panel column">
             <ul>
-                <li>Option1</li>
-                <li>Option2</li>
-                <li>Option3</li>
-                <li>Option4</li>
-                <li>Option5</li>
+                <li><a href='admin.php' style="font-weight: bold">Requests Dashboard</a></li>
+                <li><a href='edit_admin.php' style="text-decoration: none">Manage Requests</a></li>
+                <li><a href='logout.php' style="text-decoration: none">Logout</a></li>
             </ul>
         </div>
         <div class="two-thirds admin-requests column">
@@ -54,6 +52,7 @@
                   <th>Zipcode</th>
                   <th>Phone</th>
                   <th>Room</th>
+                  <th>Status</th>
                 </tr>
               </thead>
               <tbody>
@@ -76,6 +75,7 @@
                       <td><?php echo $row["zipcode"]; ?></td>
                       <td><?php echo $row["phone"]; ?></td>
                       <td><?php echo $row["room"]; ?></td>
+                      <td><?php echo $row["status"]; ?></td>
                     </tr>
                     <?php } ?>
               </tbody>
