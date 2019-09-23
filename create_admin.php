@@ -2,7 +2,7 @@
     $servername = "localhost";
     $username = "root";
     $password = "";
-    $dbname = "sunrisedb";
+    $dbname = "id10650411_sunrisedb";
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
