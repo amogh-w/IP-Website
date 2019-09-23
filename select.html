@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hotel Sunrise</title>
+    <!--Font-->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!--Favicon-->
+    <link rel="icon" type="image/png" href="images/favicon.png" />
+    <!--CSS-->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <!--jQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Scripts-->
+    <script src="js/custom.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="pricing-section">
+        <div class="row">
+          <div class="one-third column">
+            <h5>Luxury Suite</h5>
+            <img
+              src="./images/luxury-room.jpg"
+              class="u-max-full-width explore-img"
+              alt=""
+              srcset=""
+            />
+            <p>₹1000 <sub>per day</sub></p>
+          </div>
+          <div class="one-third column">
+            <h5>Deluxe Suite</h5>
+            <img
+              src="./images/deluxe-room.jpg"
+              class="u-max-full-width explore-img"
+              alt=""
+              srcset=""
+            />
+            <p>₹2000 <sub>per day</sub></p>
+          </div>
+          <div class="one-third column">
+            <h5>Premier Suite</h5>
+            <img
+              src="./images/premier-room.jpg"
+              class="u-max-full-width explore-img"
+              alt=""
+              srcset=""
+            />
+            <p>₹4000 <sub>per day</sub></p>
+          </div>
+        </div>
+      </div>
+      <div class="select-section">
+        <form action="select.php" method="POST">
+          <h5>Reservation Request Form</h5>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            style="width: 100%"
+          />
+          <br />
+          <input
+            type="text"
+            name="address"
+            placeholder="Address"
+            style="width: 100%"
+          />
+          <br />
+          <input
+            type="number"
+            name="zip"
+            placeholder="Zipcode"
+            style="width: 100%"
+          />
+          <br />
+          <input
+            type="text"
+            name="number"
+            placeholder="Phone"
+            style="width: 100%"
+          />
+          <br />
+          <label for="roomName">Room</label>
+          <select name="roomName" id="roomName" style="width: 100%">
+            <option>Luxury</option>
+            <option>Deluxe</option>
+            <option>Premier</option>
+          </select>
+          <br />
+          <input class="button-primary" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

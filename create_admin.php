@@ -1,6 +1,4 @@
 <?php
-    session_start();
-
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -8,17 +6,17 @@
 
     $conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    if ( isset($_POST['username']) && isset($_POST['password']) ) {
+    if ( isset($_POST['username']) && isset($_POST['password']) && isset($_POST['secretKey']) ) {
         $entered_username = $_POST['username'];
         $entered_password = $_POST['password'];
-        
-        $sql = "SELECT id FROM login WHERE user = '$entered_username' AND pass = '$entered_password'";
-        $result = mysqli_query($conn, $sql);
-        if(mysqli_num_rows($result) > 0) {
-          $_SESSION['loggedin'] = true;
-          header("Location: admin.php");
-        } else {
-          $_SESSION['loggedin'] = false;
+        $entered_secretKey = $_POST['secretKey'];
+        $id = rand(100, 999);
+
+        if ($entered_secretKey == 'abcd1234') {
+            $sql = "INSERT INTO login(id, user, pass) VALUES ($id, '$entered_username', '$entered_password')";
+            if (mysqli_query($conn, $sql)) {
+              header("Location: login.html");
+            }
         }
     }
 ?>
@@ -52,8 +50,8 @@
   </head>
   <body>
     <div class="login-error-container container">
-        <h3>Please check your credentials!</h3>
-        <a href="login.html"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retry Login</a>
+        <h3>Error, please retry or check your Secret Key!</h3>
+        <a href="login.html"><i class="fa fa-arrow-left" aria-hidden="true"></i> Retry</a>
     </div>
   </body>
 </html>

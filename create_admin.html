@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Login</title>
+    <title>Create Admin</title>
     <!--Font-->
     <link
       href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
@@ -30,10 +30,10 @@
     <div class="container">
       <section class="login-section">
         <h3 class="title">
-          <i class="fa fa-user" aria-hidden="true"></i><br />Admin Login
+          <i class="fa fa-user" aria-hidden="true"></i><br />Create Admin
         </h3>
         <hr />
-        <form action="login.php" method="POST" id="login-form">
+        <form action="create_admin.php" method="POST" id="create-admin-form">
           <input type="text" name="username" placeholder="Username" required />
           <br />
           <input
@@ -43,12 +43,15 @@
             required
           />
           <br />
-          <button class="button-primary" type="submit" form="login-form">
-            Sign In <i class="fa fa-sign-in" aria-hidden="true"></i>
-          </button>
-          <hr />
-          <button class="button" onclick="location.href = 'create_admin.html'">
-            Create New Admin <i class="fa fa-sign-in" aria-hidden="true"></i>
+          <input
+            type="text"
+            name="secretKey"
+            placeholder="Secret Key"
+            required
+          />
+          <br />
+          <button class="button-primary" type="submit" form="create-admin-form">
+            Create <i class="fa fa-plus" aria-hidden="true"></i>
           </button>
         </form>
       </section>
